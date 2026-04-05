@@ -1,0 +1,703 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    color:#222;
+    background-color: #c9c9c9;
+}
+
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+p {font-size: 1.5em;}
+ul {list-style: none;}
+li {font-size: 1.25em;}
+
+.barra-superior{
+    background: #1f2933;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* ENCABEZADO */
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    font-weight: bold;
+    text-align:center;
+    font-size: 1.6 em;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.menu-principal{
+    width: 100%;
+    background: white;
+    padding: 15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-principal a{
+    display: block;
+    padding: 8px 12px;
+    word-break: break-word;
+}
+
+/* SECCIONES */
+
+#inicio {
+    background: #cfeeee;
+    backdrop-filter: blur(4px); /* menos neblina */
+    -webkit-backdrop-filter: blur(4px);
+    padding: 60px 20px;
+    color: #111;
+    text-align: center;
+}
+
+#sobre-nosotros {
+  background-color: #e8dcc8; /* tu color actual */
+  backdrop-filter: blur(8px); /* tu blur actual */
+  padding: 40px 20px;
+  color: #333; /* color del texto */
+}
+
+#sobre{
+  padding: 100px 60px;
+}
+
+.sobre-nosotros-contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.sobre-nosotros-contenedor .texto {
+    width: 60%;
+    text-align: justify;
+
+}
+
+.sobre-nosotros-contenedor .imagen {
+  width: 40%; /* ancho fijo para la imagen */
+  text-align: right;
+}
+
+.sobre-nosotros-contenedor .imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px; /* opcional, bordes redondeados */
+  margin-top: 10px;
+  border: 20px solid #1f8f8f;
+}
+
+.sobre-nosotros-contenedor{
+background: rgba(255,255,255,0.6); /* fondo transparente tipo vidrio */
+padding:25px;
+border-radius:12px;
+
+box-shadow:0 8px 18px rgba(0,0,0,0.15); /* sombra debajo */
+
+backdrop-filter: blur(6px); /* efecto vidrio moderno */
+}
+
+#valores {
+    padding: 80px 60px;
+    background: #b2f0e6;
+}
+
+.contenedor-mv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mision{
+    width: 50%;
+    text-align: justify;
+    flex: 1;
+    max-width: 500px;
+    }
+
+.vision{
+    width: 50%;
+    text-align: justify;  
+    flex: 1;
+    max-width: 500px;
+}
+
+.mision, .vision{
+background: rgba(255,255,255,0.6); /* fondo transparente tipo vidrio */
+padding:25px;
+border-radius:12px;
+
+box-shadow:0 8px 18px rgba(0,0,0,0.15); /* sombra debajo */
+
+backdrop-filter: blur(6px); /* efecto vidrio moderno */
+}
+
+#servicios{
+
+background:linear-gradient(120deg, rgba(217,179,140,0.75), rgba(139,94,60,0.75)),
+url("04-imagen.img/Ladrillos.png");
+background-size:cover;
+background-position:center;
+padding:60px 20px;
+color:white;
+text-align:center;
+}
+
+
+.contenedor-servicios{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+
+max-width:1400px;
+margin:auto;
+}
+
+
+.lista {
+flex: 4;
+text-align:justify;
+}
+
+.imagen1 {
+flex: 3;
+display:flex;
+justify-content:center;
+}
+
+.imagen1 img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+
+
+#proyectos{
+    background: #f4efe6; /* menos blanco */
+    backdrop-filter: blur(4px); /* menos neblina */
+    -webkit-backdrop-filter: blur(4px);
+    padding: 60px 20px;
+    color: #111;
+    text-align: center;
+}
+
+#garantia-de-trabajo{
+    background: #cfeeee;
+    backdrop-filter: blur(4px); /* menos neblina */
+    -webkit-backdrop-filter: blur(4px);
+    padding: 60px 20px;
+    color: #111;
+    text-align: center;
+}
+
+.garantía {
+    background: white;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 10px;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+#opiniones{
+    position: relative;
+    background-image: url(04-imagen.img/Pared.png);
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;  
+    padding: 40px;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+}
+
+#opiniones::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.65);
+    pointer-events: none;
+}
+
+#opiniones > *{
+    position: relative;
+    z-index: 1;
+}
+
+#experiencia {
+    padding: 60px 20px;
+    background: #f4efe6;
+}
+
+.experiencia1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.porque-elegirnos {
+    width: 70%;
+    text-align: left;
+}
+
+.contacto {
+    width: 70%;
+    text-align: left;
+}
+
+
+/* TITULOS */
+
+h2{
+    color:#111;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+h3{
+    color:#111;
+    font-size:35px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 30px; /* tamaño más grande */
+    color: #111; /* negro elegante */
+    font-weight: 500; /* un poco más fuerte */
+}
+
+/* LISTA SERVICIOS */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    font-size:22px;
+}
+
+/* BOTON WHATSAPP */
+
+.boton{
+    background:#111;
+    color:white;
+    border:none;
+    padding:16px 28px;
+    font-size:20px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.boton:hover{
+    background:#c59d2f; /* dorado elegante */
+    color:#111;
+}
+
+.menu-principal {
+  margin-top: 60px;  
+  display: flex;
+  justify-content: center; /* centra los enlaces horizontalmente */
+  gap: 15px; /* espacio entre enlaces */
+  background-color: rgba(0,0,0,0.5); /* fondo negro semitransparente */
+  padding: 8px 10px;
+  position: sticky; /* queda fijo al hacer scroll */
+  top: 30px; /* pegadito a la parte superior */
+  z-index: 999; /* sobre otros elementos */
+  border-radius: 5px; /* opcional, bordes suaves */
+  font-size: 14px; /* tamaño discreto */
+}
+
+.menu-principal a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-principal a:hover {
+  color: #ffd700; /* efecto elegante al pasar mouse */
+}
+
+/* ====== TRABAJOS REALIZADOS ====== */
+
+.contenedor-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contenedor-imagenes img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4 px solid #1f8f8f;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contenedor-imagenes img:hover {
+    transform: scale(1.05);
+}
+
+.boton {
+    background-color: #25D366;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.estrellas{
+  color: gold;
+  font-size: 20px;
+}
+
+.opinion{
+  margin-bottom: 20px;
+}
+
+.cliente{
+  font-weight: bold;
+}
+
+/* Boton de facebook */
+
+.boton-facebook{
+display: inline-block;
+background: #1877F2;
+color: white;
+padding: 14px 28px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+margin-bottom: 15px;
+transition: 0.3s;
+}
+
+.boton-facebook:hover{
+background: #0f5dc9;
+transform: scale(1.05);
+}
+
+/* Footer principal */
+footer {
+  background-color: #4a4a4a; /* Fondo gris medio */
+  padding: 15px 20px; /* Espaciado superior/inferior y lateral */
+  font-size: 20px; /* Tamaño de letra */
+}
+
+/* Todos los textos dentro del footer en blanco */
+footer, 
+footer p, 
+footer a, 
+footer span, 
+footer li {
+  line-height: 1.6;
+  color: white !important; /* Forzar letras blancas */
+  text-decoration: none; /* Quita subrayado de enlaces */
+}
+
+/* Opcional: si quieres un efecto suave al pasar el mouse sobre enlaces */
+footer a:hover {
+  color: #c4f0f0; /* Turquesa claro al pasar el mouse */
+  transition: color 0.3s ease;
+  font-size: 20 px;
+}
+
+/* Header principal */
+.header-main {
+    display: flex; /* flex para alinear horizontalmente */
+    justify-content: space-between; /* logo izquierda, textos derecha */
+    padding: 20px;
+    width: 100%;
+    background-image: url('img/casa-moderna.jpg'); /* imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Logo */
+.header-left .logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    background-color: rgba(0,0,0,0.5); /* mantiene fondo blanco del logo */
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    position: absolute;
+    top: 5px;
+    text-align: center;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+/* Contenedor del título y subtítulo */
+.header-right {
+    text-align: right; /* alinea texto a la derecha */
+    margin-top: 210px;
+}
+
+/* Título */
+.nombre-pagina {
+    font-size: 50px; /* más pequeño que el título */
+    margin-top: 0px;
+    margin-right: 0px;
+    color: #fff;
+    text-shadow: 2px 2 px 5 px;
+    background: rgba(0,0,0,0.5); /* semitransparente para destacar sobre la imagen */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Subtítulo */
+.eslogan {
+    font-size: 22px; /* más pequeño que el título */
+    margin-top: 0px;
+    margin-right: 0px;
+    color: #fff;
+    text-shadow: 2px 2 px 5 px;
+    background: rgba(0,0,0,0.5); /* semitransparente para destacar sobre la imagen */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* Opcional: si consigues una imagen de fondo */
+.nombre-pagina-background {
+    background-image: url('img/fondo-casa.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Header con imagen de fondo */
+header {
+    display: flex;
+    flex-direction: column; /* navbar arriba, logo y nombre debajo */
+    justify-content: center;
+    padding: 20px;
+    background-image: url('04-imagen.img/Hero.png'); /* tu imagen */
+    background-size: cover; /* que cubra todo el header */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; /* ajusta la altura */
+    color: #fff;
+}
+
+/* ¡Muy importante! Elimina cualquier fondo negro que esté antes */
+header, .header-main {
+    background-color: transparent; /* esto permite que se vea la imagen */
+}
+
+#zonas {
+    background-color: #c8f1f1;
+    padding: 60px 20px;
+}
+
+
+.zonas-contenido {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#zonas h2 {
+    text-align: center;
+}
+
+#zonas p {
+    text-align: center;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Trabajo-1 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px
+}
+
+.Trabajo-2 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px
+}
+
+.Trabajo-3 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px
+}
+
+.Trabajo-4 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px
+}
+
+.Trabajo-6 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px
+}
+
+
+.Trabajo-7 {
+    background-color: #1f8f8f;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    flex:1 1 300px;
+    max-width: 320px;
+}
+
+
+.contenedor-imagenes p {
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu-principal{
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-principal a{
+    width: 100%;
+    text-align: center;
+  }
+  .contenedor-servicios {
+    flex-direction: column;
+  }
+  .mision {
+    width: 100%;
+  }
+  .vision {
+    width: 100%;
+  }
+  .sobre-nosotros-contenedor .texto{
+    width: 100%;
+  }
+  .sobre-nosotros-contenedor .imagen{
+    width: 100%;
+    text-align: center;
+  }
+  .zonas-contenido{
+    width: 100%;
+    padding: 25px;
+  }
+  .porque-elegirnos {
+    width: 100%;
+    padding: 25px;
+  }
+  .contacto {
+    width: 100%;
+    padding: 25px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header h1{
+    font-size: 26px;
+  }
+  .barra-superior{
+    font-size:18px;
+    padding:15px;
+  }
+  header{
+    padding:20px;
+  }
+  body{
+    padding:10px;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
