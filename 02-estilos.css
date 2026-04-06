@@ -118,10 +118,10 @@ header{
 background: rgba(255,255,255,0.6); /* fondo transparente tipo vidrio */
 padding:25px;
 border-radius:12px;
-
 box-shadow:0 8px 18px rgba(0,0,0,0.15); /* sombra debajo */
-
 backdrop-filter: blur(6px); /* efecto vidrio moderno */
+overflow: hidden;
+box-sizing: border-box;
 }
 
 #valores {
