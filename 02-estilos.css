@@ -95,6 +95,8 @@ header{
 .sobre-nosotros-contenedor .texto {
     width: 60%;
     text-align: justify;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 
 }
 
