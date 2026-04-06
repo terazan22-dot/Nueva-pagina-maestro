@@ -89,6 +89,7 @@ header{
   gap: 40px;
   max-width: 900px;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .sobre-nosotros-contenedor .texto {
@@ -98,8 +99,8 @@ header{
 }
 
 .sobre-nosotros-contenedor .imagen {
-  width: 40%; /* ancho fijo para la imagen */
-  text-align: right;
+  flex: 1; /* ancho fijo para la imagen */
+  text-align: center;
 }
 
 .sobre-nosotros-contenedor .imagen img {
@@ -133,6 +134,7 @@ backdrop-filter: blur(6px); /* efecto vidrio moderno */
     gap: 40px;
     max-width: 1200px;
     margin: auto;
+
 }
 
 .mision{
@@ -140,6 +142,8 @@ backdrop-filter: blur(6px); /* efecto vidrio moderno */
     text-align: justify;
     flex: 1;
     max-width: 500px;
+    overflow-wrap: break-word;
+    line-height: 1.6;
     }
 
 .vision{
@@ -147,6 +151,8 @@ backdrop-filter: blur(6px); /* efecto vidrio moderno */
     text-align: justify;  
     flex: 1;
     max-width: 500px;
+    overflow-wrap: break-word;
+    line-height: 1.6;
 }
 
 .mision, .vision{
@@ -264,9 +270,8 @@ justify-content:center;
 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
-    max-width: 900px;
+    gap: 40px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -546,14 +551,21 @@ header, .header-main {
 
 .zonas-contenido {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
     width: 100%;
-    max-width: 250px;
-    height: auto;
     margin: auto;
     text-align: center;
+}
+.zona{
+    max-width: 250%;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 #zonas h2 {
@@ -650,14 +662,23 @@ header, .header-main {
     width: 100%;
     text-align: center;
   }
+  .sobre-nosotros-contenedor{
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-nosotros-contenedor{
+    width: 100%;
+  }
   .contenedor-servicios {
     flex-direction: column;
   }
   .mision {
     width: 100%;
+    max-width: 100%;
   }
   .vision {
     width: 100%;
+    max-width: 100%;
   }
   .sobre-nosotros-contenedor .texto{
     width: 100%;
@@ -670,13 +691,17 @@ header, .header-main {
     width: 100%;
     padding: 25px;
   }
+
+  .experiencia1{
+    flex-direction: column;
+}
   .porque-elegirnos {
     width: 100%;
-    padding: 25px;
+    max-width: 100%;
   }
   .contacto {
     width: 100%;
-    padding: 25px;
+    max-width: 100%;
   }
   .header {
     flex-direction: column;
@@ -693,6 +718,19 @@ header, .header-main {
   header{
     padding:20px;
   }
+
+.header-right{
+    text-align: center;
+    padding: 10px;
+}
+.header-right h1{
+    font-size: 26px;
+    line-height: 1.2;
+}
+.eslogan{
+    font-size: 16px;
+    margin-top: 5px;
+}
   body{
     padding:10px;
   }
