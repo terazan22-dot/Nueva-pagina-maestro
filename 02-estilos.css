@@ -60,6 +60,31 @@ header{
     word-break: break-word;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500 ;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+}
+
 /* SECCIONES */
 
 #inicio {
@@ -96,8 +121,7 @@ header{
     width: 60%;
     text-align: justify;
     overflow-wrap: break-word;
-    box-sizing: border-box;
-
+    word-break: break-word;
 }
 
 .sobre-nosotros-contenedor .imagen {
@@ -553,21 +577,62 @@ header, .header-main {
 
 .zonas-contenido {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     width: 100%;
-    margin: auto;
+    margin-top: 2opx;
     text-align: center;
 }
-.zona{
-    max-width: 250%;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 30px;
+.zona {
+  list-style: none; 
+  font-size: 22px;         
+  padding: 15px 20px;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.mapa-contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* controla tamaño máximo del mapa */
+}
+
+.mapa {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Pin para Medellín */
+
+.pin-medellin {
+  position: absolute;
+  top: 36%;
+  left: 30%;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: pulso 1.8s infinite;
+}
+
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,0,0,0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255,0,0,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255,0,0,0);
+  }
 }
 
 #zonas h2 {
@@ -656,14 +721,26 @@ header, .header-main {
 }
 
 @media (max-width: 768px) {
-  .menu-principal{
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
     flex-direction: column;
-    align-items: center;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
   }
-  .menu-principal a{
-    width: 100%;
-    text-align: center;
+
+  .nav-links.active {
+    display: flex;
   }
+  
   .sobre-nosotros-contenedor{
     flex-direction: column;
     text-align: center;
