@@ -57,6 +57,7 @@ header{
 /* Enlaces del menú desktop */
 .menu-principal{
   display: block;
+  border-radius: 8px;
   padding: 8px 12px;
   text-decoration: none;
   color: #333;
