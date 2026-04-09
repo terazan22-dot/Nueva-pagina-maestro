@@ -15,10 +15,9 @@ if (boton) {
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", function(){
+  hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 }
 
-});
+);
